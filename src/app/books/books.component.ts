@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { ServiceBookService } from './serviceBook/service-book.service';
 import { Book } from './interfaz/datainterfaz';
 
-
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',

@@ -4,5 +4,7 @@ export interface Book {
     autor: string,
     editorial: string
     descripcion: string,
-    img: string
+    img: string,
+    new: boolean,
+    tapa:string
 }

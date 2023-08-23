@@ -1,9 +1,24 @@
-<section>
-    <h1>Libros</h1>
-    <div>
+<section class="books">
+    <h1 class="books__title">Libros</h1>
+    <div class="books__section">
         <ng-container *ngFor="let item of data;">
-            <div>
-                <p>{{item.titulo}}</p>
+            <div class="books__container">
+                <div class="books__imgcontainer">
+                    <img src={{item.img}} alt="cover" class="books__container__img"/>
+                    <ng-container *ngIf = item.new>
+                        <span class="books__container__new">NUEVO</span>
+                    </ng-container>
+                </div>
+                
+                <div>
+                    <h2 class="books__container__subtitle">{{item.titulo}}</h2>
+                    <p class="books__container__tapa">Tapa {{item.tapa}}</p>
+                    <div>
+                        <p class="books__container__description">{{item.editorial}}</p>
+                        <p class="books__container__description">{{item.descripcion}}</p>
+                        <p class="books__container__description">{{item.img}}</p>
+                    </div>
+                </div>
             </div>
         </ng-container>
     </div>
