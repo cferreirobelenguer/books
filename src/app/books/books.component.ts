@@ -10,6 +10,7 @@ import { Book } from './interfaz/datainterfaz';
 export class BooksComponent {
 
   public data: Book[] = [];
+  public titledata : string = '';
   constructor (
     private serviceBookService : ServiceBookService
   ) {
@@ -17,5 +18,15 @@ export class BooksComponent {
       //get json data books
       this.data = res;
     })
+  }
+
+  public handleChange () {
+    let number= '0123456789'
+    //we validate if titledata is not a number
+    if (!number.split('').some(digit => this.titledata.includes(digit))) {
+      console.log(this.titledata);
+      this.titledata = this.titledata.toLowerCase();
+    }
+
   }
 }

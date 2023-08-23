@@ -1,5 +1,10 @@
 <section class="books">
-    <h1 class="books__title">Libros</h1>
+    <div class="books__search">
+        <img src="https://i.ibb.co/0tySPYk/logoempresa.png" alt="logo" class="books__search__logo"/>
+        <div class="books__inputcontainer">
+            <input type="search" placeholder="Busca por título" class="books__inputContainer__input" [(ngModel)]="titledata" (change)="handleChange()"/>          
+        </div>
+    </div>
     <div class="books__section">
         <ng-container *ngFor="let item of data;">
             <div class="books__container">
@@ -11,12 +16,12 @@
                 </div>
                 
                 <div>
-                    <h2 class="books__container__subtitle">{{item.titulo}}</h2>
                     <p class="books__container__tapa">Tapa {{item.tapa}}</p>
+                    <h2 class="books__container__subtitle">{{item.titulo | uppercase}}</h2>
+                    <h2 class="books__container__autor">{{item.autor | uppercase}}</h2>
                     <div>
                         <p class="books__container__description">{{item.editorial}}</p>
                         <p class="books__container__description">{{item.descripcion}}</p>
-                        <p class="books__container__description">{{item.img}}</p>
                     </div>
                 </div>
             </div>
