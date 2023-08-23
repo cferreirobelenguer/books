@@ -11,6 +11,8 @@ export class BooksComponent {
 
   public data: Book[] = [];
   public titledata : string = '';
+  public filterData : Book[] =[];
+  
   constructor (
     private serviceBookService : ServiceBookService
   ) {
@@ -24,8 +26,10 @@ export class BooksComponent {
     let number= '0123456789'
     //we validate if titledata is not a number
     if (!number.split('').some(digit => this.titledata.includes(digit))) {
-      console.log(this.titledata);
-      this.titledata = this.titledata.toLowerCase();
+      //filter search if title starts by the data input
+      this.filterData = this.data.filter(item =>
+        item.titulo.toLowerCase().startsWith(this.titledata.toLowerCase())
+      );
     }
 
   }

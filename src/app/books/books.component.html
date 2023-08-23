@@ -6,26 +6,51 @@
         </div>
     </div>
     <div class="books__section">
-        <ng-container *ngFor="let item of data;">
-            <div class="books__container">
-                <div class="books__imgcontainer">
-                    <img src={{item.img}} alt="cover" class="books__container__img"/>
-                    <ng-container *ngIf = item.new>
-                        <span class="books__container__new">NUEVO</span>
-                    </ng-container>
-                </div>
-                
-                <div>
-                    <p class="books__container__tapa">Tapa {{item.tapa}}</p>
-                    <h2 class="books__container__subtitle">{{item.titulo | uppercase}}</h2>
-                    <h2 class="books__container__autor">{{item.autor | uppercase}}</h2>
+        <ng-container *ngIf ="this.titledata ; else noFilter">
+            <ng-container  *ngFor="let item of filterData;">
+                <div class="books__container">
+                    <div class="books__imgcontainer">
+                        <img src={{item.img}} alt="cover" class="books__container__img"/>
+                        <ng-container *ngIf = item.new>
+                            <span class="books__container__new">NUEVO</span>
+                        </ng-container>
+                    </div>
+                    
                     <div>
-                        <p class="books__container__description">{{item.editorial}}</p>
-                        <p class="books__container__description">{{item.descripcion}}</p>
+                        <p class="books__container__tapa">Tapa {{item.tapa}}</p>
+                        <h2 class="books__container__subtitle">{{item.titulo | uppercase}}</h2>
+                        <h2 class="books__container__autor">{{item.autor | uppercase}}</h2>
+                        <div>
+                            <p class="books__container__description">{{item.editorial}}</p>
+                            <p class="books__container__description">{{item.descripcion}}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </ng-container>
         </ng-container>
+        <ng-template #noFilter>
+            <ng-container  *ngFor="let item of data;">
+                <div class="books__container">
+                    <div class="books__imgcontainer">
+                        <img src={{item.img}} alt="cover" class="books__container__img"/>
+                        <ng-container *ngIf = item.new>
+                            <span class="books__container__new">NUEVO</span>
+                        </ng-container>
+                    </div>
+                    
+                    <div>
+                        <p class="books__container__tapa">Tapa {{item.tapa}}</p>
+                        <h2 class="books__container__subtitle">{{item.titulo | uppercase}}</h2>
+                        <h2 class="books__container__autor">{{item.autor | uppercase}}</h2>
+                        <div>
+                            <p class="books__container__description">{{item.editorial}}</p>
+                            <p class="books__container__description">{{item.descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-template>
+        
     </div>
     
 
