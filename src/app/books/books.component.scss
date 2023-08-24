@@ -3,12 +3,24 @@
     padding: 64px;
     margin: 0;
     box-sizing: border-box;
+    gap: 16px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    &__select {
+        text-align: left;
+        padding:0 16px;
+        &__input {
+            padding: 5px;
+            width: 120px;
+            font-family:Arial, Helvetica, sans-serif;
+            &--options {
+                &:focus {
+                    background-color: darkcyan;
+                    color: #fff;
+                }
+            }
+        }
+    }
     &__inputContainer {
         position: relative;
         &__img {
@@ -43,6 +55,7 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 12px;
+        box-sizing: border-box;
         @include desktop-sm {
             flex-direction: row;
             justify-content: space-between;
@@ -75,6 +88,8 @@
         justify-content: flex-start;
         border: 1px solid darkcyan;
         padding: 24px;
+        width: 100%;
+        box-sizing: border-box;
         
         @include desktop-sm {
             flex-direction: row;
@@ -120,3 +135,4 @@
         }
     }
 }
+

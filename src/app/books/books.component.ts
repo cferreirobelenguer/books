@@ -12,6 +12,8 @@ export class BooksComponent {
   public data: Book[] = [];
   public titledata : string = '';
   public filterData : Book[] =[];
+  public option : string ='';
+  public orders : string [] = ['Título', 'Autor', 'Editorial'];
   
   constructor (
     private serviceBookService : ServiceBookService
@@ -31,6 +33,9 @@ export class BooksComponent {
         item.titulo.toLowerCase().startsWith(this.titledata.toLowerCase())
       );
     }
+  }
 
+  public getOption () {
+    console.log("opción de orden ",this.option)
   }
 }

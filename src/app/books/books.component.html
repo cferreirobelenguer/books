@@ -5,6 +5,11 @@
             <input type="search" placeholder="Busca por título" class="books__inputContainer__input" [(ngModel)]="titledata" (change)="handleChange()"/>          
         </div>
     </div>
+    <div class="books__select">
+        <select class="books__select__input" [(ngModel)]="option" (change)="getOption()">Ordenar por
+            <option class="books__select__input--options" *ngFor="let value of orders">{{value}}</option>
+        </select>
+    </div>
     <div class="books__section">
         <ng-container *ngIf ="this.titledata ; else noFilter">
             <ng-container  *ngFor="let item of filterData;">
