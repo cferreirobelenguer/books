@@ -13,7 +13,7 @@ export class BooksComponent {
   public titledata : string = '';
   public filterData : Book[] =[];
   public option : string ='';
-  public orders : string [] = ['titulo', 'autor', 'editorial'];
+  public orders : string [] = ['Título', 'Autor', 'Editorial'];
   
   constructor (
     private serviceBookService : ServiceBookService
@@ -40,13 +40,16 @@ export class BooksComponent {
     //sort by title, author and editorial
     console.log("opción de orden ",this.option)
     switch(this.option) {
-      case 'titulo' :
+      case 'Título' :
+        this.option= 'titulo';
         this.handleSort(this.option);
         break;
-      case 'autor' :
+      case 'Autor' :
+        this.option = 'autor';
         this.handleSort(this.option);
         break;
-      case 'editorial' : 
+      case 'Editorial' :
+        this.option = 'editorial';
         this.handleSort(this.option);
         break;
     }
