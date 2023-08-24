@@ -25,15 +25,13 @@ export class BooksComponent {
   }
 
   public handleChange () {
-    let number= '0123456789'
-    //we validate if titledata is not a number
-    if (!number.split('').some(digit => this.titledata.includes(digit))) {
-      //filter search if title starts by the data input
-      this.filterData = this.data.filter(item =>
+    //filter search if title starts by the data input
+    if(this.titledata) {
+        this.filterData = this.data.filter(item =>
         item.titulo.toLowerCase().startsWith(this.titledata.toLowerCase())
       );
     }
-    console.log(this.filterData)
+    
   }
 
   public getOption () {

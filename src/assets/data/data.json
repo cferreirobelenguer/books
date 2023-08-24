@@ -2,9 +2,10 @@
     {
         "id": "1",
         "titulo": "El Juego de Ender",
+        "genre" : "Fantasía",
         "autor": "Orson Scott Card",
         "editorial": "Ediciones B / Zeta",
-        "descripcion": "La Tierra está amenazada por una especie extraterrestre de insectos que pretende destruir la humanidad. Para vencerlos se precisa la intervención de un genio militar, por lo cual se permite el nacimiento de Ender, tercer hijo de una pareja en un mundo que limita a dos el número de descendientes. Ender se entrenará en una estación espacial, superará a sus rivales y se convertirá en la persona capaz de dirigir las flotas terrestres contra los insectos de otros mundos.",
+        "descripcion": "La Tierra está amenazada por una especie extraterrestre de insectos que pretende destruir la humanidad. Para vencerlos se precisa la intervención de un genio militar.",
         "img": "https://i.ibb.co/DfFKjvQ/ender.png",
         "new": true,
         "tapa": "blanda"
@@ -12,21 +13,170 @@
     {
         "id": "2",
         "titulo": "Juego de tronos",
+        "genre" : "Fantasía",
         "autor": "George R. R. Martin",
         "editorial": "Gigamesh",
-        "descripcion": "Tras el largo verano, el invierno se acerca a los Siete Reinos. Lord Eddard Stark, señor de Invernalia, deja sus dominios para unirse a la corte de su amigo el rey Robert Baratheon, llamado el Usurpador, hombre díscolo y otrora guerrero audaz cuyas mayores aficiones son comer, beber y engendrar bastardos. Eddard Stark ocupará el cargo de Mano del Rey e intentará desentrañar una maraña de intrigas que pondrá en peligro su vida y la de todos los suyos. En un mundo cuyas estaciones pueden durar decenios y en el que retazos de una magia inmemorial y olvidada surgen en los rincones más sombríos y maravillosos, la traición y la lealtad, la compasión y la sed de venganza, el amor y el poder hacen del juego de tronos una poderosa trampa que atrapará en sus fauces a los personajes... y al lector.",
+        "descripcion": "En un reino donde las estaciones duran años, una batalla épica por el trono se desarrolla.",
         "img": "https://i.ibb.co/yWGqMRR/juego.png",
         "new": false,
-        "tapa": "blanda"
+        "tapa": "blanda",
+        "ISBN": "978-0553103540",
+        "otherBooks": [
+            "Choque de Reyes",
+            "Tormenta de Espadas",
+            "Festín de Cuervos"
+        ]
     },
     {
         "id": "3",
         "titulo": "I robot",
+        "genre" : "Fantasía",
         "autor": "Isaac Asimov",
         "editorial": "Edhasa",
-        "descripcion": "Los robots de Isaac Asimov son máquinas capaces de llevar a cabo muy diversas tareas, y que a menudo se plantean a sí mismos problemas de 'conducta humana'. Pero estas cuestiones se resuelven en Yo, robot en el ámbito de las tres leyes fundamentales de la robótica, concebidas por Asimov, y que no dejan de proponer extraordinarias paradojas que a veces se explican por errores de funcionamiento y otras por la creciente complejidad de los 'programas'. Las paradojas que se plantean en estos relatos futuristas no son sólo ingeniosos ejercicios intelectuales sino sobre todo una indagación sobre la situación del hombre actual en relación con los avances tecnológicos y con la experiencia del tiempo.",
+        "descripcion": "Los robots de Isaac Asimov son máquinas capaces de llevar a cabo muy diversas tareas, y que a menudo se plantean a sí mismos problemas de 'conducta humana'.",
         "img": "https://i.ibb.co/G35htLm/robot.png",
         "new": true,
-        "tapa": "dura"
+        "tapa": "dura",
+        "ISBN": "978-0618690857"
+    },
+    {
+        "id": "4",
+        "titulo": "El Señor de los Anillos",
+        "genre" : "Fantasía",
+        "autor": "J.R.R. Tolkien",
+        "editorial": "Minotauro",
+        "descripcion": "Una aventura épica en un mundo de fantasía llamado la Tierra Media.",
+        "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1566425108i/33.jpg",
+        "new": false,
+        "tapa": "dura",
+        "ISBN": "978-0618640157",
+        "otherBooks": [
+            "El Hobbit",
+            "El Silmarillion"
+        ]
+    },
+    {
+        "id": "5",
+        "titulo": "Harry Potter y la piedra filosofal",
+        "genre" : "Fantasía",
+        "autor": "J.K. Rowling",
+        "editorial": "Salamandra",
+        "descripcion": "Un niño descubre que es un mago y comienza una aventura en una escuela de magia.",
+        "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1550337333i/15868.jpg",
+        "new": false,
+        "tapa": "blanda",
+        "ISBN": "978-0747532699",
+        "otherBooks": [
+            "Harry Potter y la cámara secreta",
+            "Harry Potter y el prisionero de Azkaban",
+            "Harry Potter y el cáliz de fuego"
+        ]
+    },
+    {
+        "id": "6",
+        "titulo": "1984",
+        "genre" : "Ciencia ficción",
+        "autor": "George Orwell",
+        "editorial": "Debolsillo",
+        "descripcion": "Una inquietante visión de un futuro distópico y totalitario.",
+        "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1657781256i/61439040.jpg",
+        "new": true,
+        "tapa": "dura",
+        "ISBN": "978-0451524935",
+        "otherBooks": [
+            "Rebelión en la granja"
+        ]
+    },
+    {
+        "id": "7",
+        "titulo": "Apocalipsis Zombie",
+        "genre" : "Zombies",
+        "autor": "Manel Loreiro",
+        "editorial": "Diabolo ediciones",
+        "descripcion": "Un gallego se queda en casa en pleno apocalipsis zombie y acaba casi salvando el mundo.",
+        "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1422626176i/24762432.jpg",
+        "new": false,
+        "tapa": "blanda",
+        "ISBN": "978-4444532611"
+    },
+    {
+        "id": "8",
+        "titulo": "Dune",
+        "genre" : "Ciencia ficción",
+        "autor": "Frank Herbert",
+        "editorial": "Debolsillo",
+        "descripcion": "En el inhóspito planeta desértico de Arrakis, una gran intriga política y familiar se desarrolla.",
+        "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
+        "new": false,
+        "tapa": "blanda",
+        "ISBN": "978-0441172719",
+        "otherBooks": [
+            "El mesías de Dune",
+            "Hijos de Dune"
+        ]
+    },
+    {
+        "id": "9",
+        "titulo": "El resplandor",
+        "genre" : "Terror",
+        "autor": "Stephen King",
+        "editorial": "Redrum",
+        "descripcion": "Una familia se muda a un hotel aislado para el invierno donde una presencia siniestra influye en el padre hacia la violencia.",
+        "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641398308i/60038757.jpg",
+        "new": false,
+        "tapa": "blanda",
+        "ISBN": "978-0307743657",
+        "otherBooks": [
+            "Carrie",
+            "It"
+        ]
+    },
+    {
+        "id": "10",
+        "titulo": "Drácula",
+        "genre" : "Terror",
+        "autor": "Bram Stoker",
+        "editorial": "Akal",
+        "descripcion": "La historia del infame conde Drácula y su intento de mudarse de Transilvania a Inglaterra.",
+        "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387151694i/17245.jpg",
+        "new": false,
+        "tapa": "blanda",
+        "ISBN": "978-0486411095",
+        "otherBooks": [
+            "La joya de las siete estrellas",
+            "La madriguera del gusano blanco"
+        ]
+    },
+    {
+        "id": "11",
+        "titulo": "Frankestein",
+        "genre" : "Terror",
+        "autor": "Mary Shelley",
+        "editorial": "Al Hilal",
+        "descripcion": "Un científico obsesionado crea una criatura viva a partir de partes de cuerpos robadas, con consecuencias desastrosas.",
+        "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1669159060i/63631742.jpg",
+        "new": false,
+        "tapa": "blanda",
+        "ISBN": "978-0486282114",
+        "otherBooks": [
+            "El último hombre",
+            "Valperga"
+        ]
+    },
+    {
+        "id": "12",
+        "titulo": "La llamada de Cthulhu",
+        "genre" : "Terror",
+        "autor": "H.P. Lovecraft",
+        "editorial": "Alma Europa",
+        "descripcion": "La historia de un monstruo ancestral que amenaza con revivir y dominar el mundo.",
+        "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1485924654i/34094154.jpg",
+        "new": false,
+        "tapa": "blanda",
+        "ISBN": "978-1542461690",
+        "otherBooks": [
+            "El horror de Dunwich",
+            "En las montañas de la locura"
+        ]
     }
 ]
