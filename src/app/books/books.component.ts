@@ -13,7 +13,7 @@ export class BooksComponent {
   public titledata : string = '';
   public filterData : Book[] =[];
   public option : string ='';
-  public orders : string [] = ['Título', 'Autor', 'Editorial'];
+  public orders : string [] = ['titulo', 'autor', 'editorial'];
   
   constructor (
     private serviceBookService : ServiceBookService
@@ -33,9 +33,30 @@ export class BooksComponent {
         item.titulo.toLowerCase().startsWith(this.titledata.toLowerCase())
       );
     }
+    console.log(this.filterData)
   }
 
   public getOption () {
+    //sort by title, author and editorial
     console.log("opción de orden ",this.option)
+    switch(this.option) {
+      case 'titulo' :
+        this.handleSort(this.option);
+        break;
+      case 'autor' :
+        this.handleSort(this.option);
+        break;
+      case 'editorial' : 
+        this.handleSort(this.option);
+        break;
+    }
+  }
+
+  public handleSort (option: string) {
+    const orderdata = this.data.sort(function (a: any, b: any) {
+      return a[option].localeCompare(b[option], 'en', { numeric: false });
+    });
+    
+    console.log(orderdata)
   }
 }
