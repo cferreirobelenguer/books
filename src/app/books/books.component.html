@@ -33,7 +33,7 @@
             </ng-container>
         </ng-container>
         <ng-template #noFilter>
-            <ng-container  *ngFor="let item of data;">
+            <ng-container  *ngFor="let item of result;">
                 <div class="books__container">
                     <div class="books__imgcontainer">
                         <img src={{item.img}} alt="cover" class="books__container__img"/>
@@ -53,7 +53,16 @@
                 </div>
             </ng-container>
         </ng-template>
-        
+        <div class="button">
+            <button class="button__container" (click)="handlePrevious()">
+                <img src="../../assets/icons/right.svg" width="16" height="16"/>
+                Anterior
+            </button>
+            <button class="button__container" (click)="handleNext()">
+                Siguiente
+                <img src="../../assets/icons/left.svg" width="16" height="16"/>
+            </button>
+        </div>
     </div>
     
 
