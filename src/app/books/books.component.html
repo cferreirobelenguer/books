@@ -2,7 +2,7 @@
     <div class="books__search">
         <img src="https://i.ibb.co/0tySPYk/logoempresa.png" alt="logo" class="books__search__logo"/>
         <div class="books__inputcontainer">
-            <input type="search" placeholder="Busca por título" class="books__inputContainer__input" [(ngModel)]="titledata" (change)="handleChange()"/>          
+            <input type="search" placeholder="Busca por título" class="books__inputContainer__input" [(ngModel)]="titledata" (input)="handleChange()"/>          
         </div>
     </div>
     <div class="books__select">
