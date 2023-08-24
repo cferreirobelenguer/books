@@ -53,6 +53,7 @@ export class BooksComponent {
   }
 
   public handleSort (option: string) {
+    //function sort options
     const orderdata = this.data.sort(function (a: any, b: any) {
       return a[option].localeCompare(b[option], 'en', { numeric: false });
     });
