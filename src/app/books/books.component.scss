@@ -74,6 +74,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 8px;
     }
     &__title {
         margin: 0;
@@ -89,6 +90,7 @@
         flex-direction: column;
         justify-content: flex-start;
         border: 1px solid darkcyan;
+        border-radius: 5px;
         padding: 24px;
         width: 100%;
         box-sizing: border-box;
