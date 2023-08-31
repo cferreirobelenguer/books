@@ -1,1 +1,29 @@
-<p>detail works!</p>
+<section class="detail">
+    <div class="detail__search">
+        <img src="https://i.ibb.co/0tySPYk/logoempresa.png" alt="logo" class="detail__search__logo"/>
+    </div>
+    <div class="detail__container">
+        <div class="detail__imgcontainer">
+            <img src={{this.info.img}} alt="cover" class="detail__container__img"/>
+            <ng-container *ngIf = this.info.new>
+                <span class="detail__container__new">NUEVO</span>
+            </ng-container>
+        </div>
+        
+        <div>
+            <h2 class="detail__container__subtitle">{{this.info.titulo | uppercase}}</h2>
+            <h2 class="detail__container__autor">{{this.info.autor | uppercase}}</h2>
+            <div>
+                <p class="detail__container__description">{{this.info.editorial}}</p>
+                <p class="detail__container__description">{{this.info.descripcion}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <button class="button__container" (click)="handleRedirect()">
+            <img src="../../assets/icons/right.svg" width="16" height="16"/>
+            Ir a home
+        </button>
+    </div>
+</section>
+
