@@ -54,11 +54,11 @@
             </ng-container>
         </ng-template>
         <div class="button">
-            <button class="button__container" (click)="handlePrevious()">
+            <button [ngClass]="{'button__disabled': this.limitPrevious , 'button__container': !limitPrevious}" (click)="handlePrevious()">
                 <img src="../../assets/icons/right.svg" width="16" height="16"/>
                 Anterior
             </button>
-            <button class="button__container" (click)="handleNext()">
+            <button [ngClass]="{'button__disabled': this.limitNext, 'button__container': !limitNext}" (click)="handleNext()">
                 Siguiente
                 <img src="../../assets/icons/left.svg" width="16" height="16"/>
             </button>

@@ -20,6 +20,8 @@ export class BooksComponent implements OnInit{
   public limit : number = 0;
   public result: Book[] = [];
   public previous : number = 0;
+  public limitPrevious : boolean = false;
+  public limitNext : boolean = false;
   
   constructor(
     private serviceBookService: ServiceBookService,
@@ -43,7 +45,6 @@ export class BooksComponent implements OnInit{
 
   //filter search if title starts by the data input
   public handleChange () {
-  
     if(this.titledata) {
         this.filterData = this.data.filter(item =>
         item.titulo.toLowerCase().startsWith(this.titledata.toLowerCase())
@@ -54,7 +55,6 @@ export class BooksComponent implements OnInit{
 
   //sort by title, author and editorial
   public getOption () {
-  
     switch(this.option) {
       case 'Título' :
         this.option= 'titulo';
@@ -73,7 +73,6 @@ export class BooksComponent implements OnInit{
 
   //function to sort options
   public handleSort (option: string) {
-    
     const orderdata = this.data.sort(function (a: any, b: any) {
       return a[option].localeCompare(b[option], 'en', { numeric: false });
     });
@@ -82,23 +81,32 @@ export class BooksComponent implements OnInit{
     this.result = this.getPagination(this.previous, this.limit);
   }
 
-
+  //Pagination previous
   public handlePrevious() {
+    this.limitNext = false;
     if (this.previous >= 3) {
       this.limit = this.previous;
       this.previous -= 3;
       this.result = this.getPagination(this.previous, this.limit);
+      this.limitPrevious = false;
+    } else {
+      this.limitPrevious = true;
     }
   }
-
+  //Pagination next
   public handleNext() {
-
+    this.limitPrevious = false;
     if (this.limit < this.total && this.limit !== this.total) {
       if (this.previous === 0) {
         this.limit = 3;
+        this.limitNext = false;
+      }else if (this.limit === this.total-3){
+        this.limitNext = true;
+      } else {
+        this.limitNext = false;
       }
         this.previous = this.limit;
-        this.limit += 3;
+        this.limit += 3;  
     }
     
 
@@ -111,7 +119,6 @@ export class BooksComponent implements OnInit{
     for (let item = previous; item < limit && item < this.data.length; item++) {
       datosPaginados.push(this.data[item]);
     }
-
     return datosPaginados;
   }
   
