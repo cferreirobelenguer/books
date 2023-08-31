@@ -8,7 +8,13 @@
         "descripcion": "La Tierra está amenazada por una especie extraterrestre de insectos que pretende destruir la humanidad. Para vencerlos se precisa la intervención de un genio militar.",
         "img": "https://i.ibb.co/DfFKjvQ/ender.png",
         "new": true,
-        "tapa": "blanda"
+        "tapa": "blanda",
+        "ISBN": "978-1556163545",
+        "otherBooks": [
+            "Choque de Reyes",
+            "Tormenta de Espadas",
+            "Festín de Cuervos"
+        ]
     },
     {
         "id": "2",
