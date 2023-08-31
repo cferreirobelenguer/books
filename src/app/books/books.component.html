@@ -1,6 +1,6 @@
 <section class="books">
     <div class="books__search">
-        <img src="https://i.ibb.co/0tySPYk/logoempresa.png" alt="logo" class="books__search__logo"/>
+        <a routerLink=""><img src="https://i.ibb.co/0tySPYk/logoempresa.png" alt="logo" class="books__search__logo"/></a>
         <div class="books__inputcontainer">
             <input type="search" placeholder="Busca por título" class="books__inputContainer__input" [(ngModel)]="titledata" (input)="handleChange()"/>          
         </div>
@@ -44,7 +44,7 @@
                     
                     <div>
                         <h2 class="books__container__subtitle">{{item.titulo | uppercase}}</h2>
-                        <h2 class="books__container__autor">{{item.autor | uppercase}}</h2>
+                        <h3 class="books__container__autor">{{item.autor | uppercase}}</h3>
                         <div>
                             <p class="books__container__description">{{item.editorial}}</p>
                             <p class="books__container__description">{{item.descripcion}}</p>

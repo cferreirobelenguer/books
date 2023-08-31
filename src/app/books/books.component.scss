@@ -64,10 +64,12 @@
         }
         &__logo {
             width: 100px;
+            cursor: pointer;
         }
     }
     &__imgcontainer {
         position: relative;
+        cursor: pointer;
     }
     &__section {
         padding: 12px 24px 24px 24px;
@@ -149,6 +151,7 @@
     align-items: center;
     gap: 16px;
     &__container {
+        cursor: pointer;
         background-color: darkcyan;
         color: #fff;
         display: flex;

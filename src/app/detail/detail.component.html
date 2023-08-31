@@ -1,6 +1,6 @@
 <section class="detail">
     <div class="detail__search">
-        <img src="https://i.ibb.co/0tySPYk/logoempresa.png" alt="logo" class="detail__search__logo"/>
+        <a routerLink=""><img src="https://i.ibb.co/0tySPYk/logoempresa.png" alt="logo" class="detail__search__logo"/></a>
     </div>
     <div class="detail__container">
         <div class="detail__imgcontainer">
@@ -12,11 +12,12 @@
         
         <div>
             <h2 class="detail__container__subtitle">{{this.info.titulo | uppercase}}</h2>
-            <h2 class="detail__container__autor">{{this.info.autor | uppercase}}</h2>
-            <div>
-                <p class="detail__container__description">{{this.info.editorial}}</p>
-                <p class="detail__container__description">{{this.info.descripcion}}</p>
-            </div>
+            <h3 class="detail__container__autor">{{this.info.autor | uppercase}}</h3>
+            <p class="detail__container__description">{{this.info.editorial}}</p>
+            <p class="detail__container__genre">{{this.info.genre}}</p>
+            <p class="detail__container__tapa">Tapa {{this.info.tapa}}</p>
+            <p class="detail__container__description">{{this.info.descripcion}}</p>
+            <p class="detail__container__isbn">ISBN: {{this.info.ISBN}}</p>
         </div>
     </div>
     <div class="button">
