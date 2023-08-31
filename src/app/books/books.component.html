@@ -34,7 +34,7 @@
         </ng-container>
         <ng-template #noFilter>
             <ng-container  *ngFor="let item of result;">
-                <div class="books__container">
+                <div class="books__container" (click)="handleRedirection(item.id)">
                     <div class="books__imgcontainer">
                         <img src={{item.img}} alt="cover" class="books__container__img"/>
                         <ng-container *ngIf = item.new>

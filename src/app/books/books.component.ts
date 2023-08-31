@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceBookService } from './serviceBook/service-book.service';
 import { Book } from './interfaz/datainterfaz';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-books',
@@ -20,7 +22,8 @@ export class BooksComponent implements OnInit{
   public previous : number = 0;
   
   constructor(
-    private serviceBookService: ServiceBookService
+    private serviceBookService: ServiceBookService,
+    private router: Router
   ) {}
   
   async ngOnInit(): Promise<void> {
@@ -112,4 +115,8 @@ export class BooksComponent implements OnInit{
     return datosPaginados;
   }
   
+  public handleRedirection(id: string) {
+    console.log(id)
+    this.router.navigate(['info', id])
+  }
 }
