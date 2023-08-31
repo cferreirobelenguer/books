@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BooksComponent } from './books/books.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DetailComponent } from './detail/detail/detail.component';
+import { BooksComponent } from './books/books.component';
+import { DetailComponent } from './detail/detail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DetailComponent } from './detail/detail/detail.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
