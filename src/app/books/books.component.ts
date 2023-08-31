@@ -115,6 +115,7 @@ export class BooksComponent implements OnInit{
     return datosPaginados;
   }
   
+  //function that redirect a detail component with id 
   public handleRedirection(id: string) {
     console.log(id)
     this.router.navigate(['info', id])
