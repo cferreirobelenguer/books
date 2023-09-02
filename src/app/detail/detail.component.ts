@@ -54,6 +54,7 @@ export class DetailComponent {
     this.router.navigate([''])
   }
 
+  //puntuation function: change the color to the star, and send value to server
   public handleValoration(index:number) {
     const indexElement = index;
     const elementsArray = this.starElements.toArray();
