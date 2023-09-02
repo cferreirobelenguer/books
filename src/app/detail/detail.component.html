@@ -8,21 +8,33 @@
         <p class="detail__links__parrafo">{{this.info.titulo}}</p>
     </div>
     <div class="detail__container">
-        <div class="detail__imgcontainer">
-            <img src={{this.info.img}} alt="cover" class="detail__container__img"/>
-            <ng-container *ngIf = this.info.new>
-                <span class="detail__container__new">NUEVO</span>
-            </ng-container>
-        </div>
+        <div class="detail__container__section">
+            <div class="detail__imgcontainer">
+                <img src={{this.info.img}} alt="cover" class="detail__container__section__img"/>
+                <ng-container *ngIf = this.info.new>
+                    <span class="detail__container__section__new">NUEVO</span>
+                </ng-container>
+            </div>
         
-        <div>
-            <h2 class="detail__container__subtitle">{{this.info.titulo | uppercase}}</h2>
-            <h3 class="detail__container__autor">{{this.info.autor | uppercase}}</h3>
-            <p class="detail__container__description">{{this.info.editorial}}</p>
-            <p class="detail__container__genre">{{this.info.genre}}</p>
-            <p class="detail__container__tapa">Tapa {{this.info.tapa}}</p>
-            <p class="detail__container__description">{{this.info.descripcion}}</p>
-            <p class="detail__container__isbn">ISBN: {{this.info.ISBN}}</p>
+            <div>
+                <h2 class="detail__container__section__subtitle">{{this.info.titulo | uppercase}}</h2>
+                <h3 class="detail__container__section__autor">{{this.info.autor | uppercase}}</h3>
+                <p class="detail__container__section__description">{{this.info.editorial}}</p>
+                <p class="detail__container__section__genre">{{this.info.genre}}</p>
+                <p class="detail__container__section__tapa">Tapa {{this.info.tapa}}</p>
+                <p class="detail__container__section__description">{{this.info.descripcion}}</p>
+                <p class="detail__container__section__isbn">ISBN: {{this.info.ISBN}}</p>
+            </div>
+        </div>
+        <div class="valoration">
+            <p class="valoration__title">Opiniones de los clientes: </p>
+            <div class="valoration__container" #starElement>
+                <button class="star" (click)="handleValoration(0)" ><span class="stararea">★</span></button>
+                <button class="star" (click)="handleValoration(1)"><span class="stararea">★</span></button>
+                <button class="star" (click)="handleValoration(2)"><span class="stararea">★</span></button>
+                <button class="star" (click)="handleValoration(3)"><span class="stararea">★</span></button>
+                <button class="star" (click)="handleValoration(4)"><span class="stararea">★</span></button>
+            </div>
         </div>
     </div>
     <div class="button">
