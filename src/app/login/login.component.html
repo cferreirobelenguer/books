@@ -1,0 +1,33 @@
+<section>
+    <div class="login__search">
+        <img src="https://i.ibb.co/0tySPYk/logoempresa.png" alt="logo" class="login__search__logo"/>
+    </div>
+    <div class="login">
+        <form class="login__container" method="post">
+            <img src="https://i.ibb.co/3zCLwsj/logo2.png" class="login__container--img">
+            <h1 class="login__container__title">Inicia sesión</h1>
+            <input
+                type="email"
+                [(ngModel)]="email"
+                name="email"
+                placeholder="Email"
+                required="required"
+                class="login__container--input"
+            />
+            <input
+                type="password"
+                [(ngModel)]="password"
+                name="password"
+                placeholder="Password"
+                required="required"
+                class="login__container--input"
+            />
+            <button type="submit" (click)="handleLogin()" class="login__container__button">Continuar</button>
+            <div class="login__container__new">
+                <h5 class="login__container__new--title">¿Eres nuevo en Pola Books?</h5>
+                <button type="button" (click)="handleRedirectRegister()" class="login__container__button">Crea tu cuenta</button>
+            </div>
+            
+        </form>
+    </div>
+</section>
